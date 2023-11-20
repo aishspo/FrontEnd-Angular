@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 })
 
 export class HomeComponent implements OnInit {
+search($event: Event) {
+throw new Error('Method not implemented.');
+}
 
   funcionarios: Funcionario[] = [];
 
@@ -23,12 +26,16 @@ export class HomeComponent implements OnInit {
   constructor( private FuncionarioService: FuncionarioService ) {}
 
   ngOnInit(): void {
+
     this.FuncionarioService.GetFuncionarios().subscribe(data => {
       const dados = data.dados;
-      dados.map
-      console.log(data);
+
+        dados.map((item) => {
+          console.log(this.funcionarios)
+        })
 
     });
+
   }
 
 }
