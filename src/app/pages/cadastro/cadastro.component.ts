@@ -9,6 +9,9 @@ import { FuncionarioFormComponent } from "../../componentes/funcionario-form/fun
     styleUrl: './cadastro.component.css',
     imports: [CommonModule, FuncionarioFormComponent]
 })
-export class CadastroComponent {
 
+export class CadastroComponent {
+    createFuncionario() {
+        
+    }
 }
