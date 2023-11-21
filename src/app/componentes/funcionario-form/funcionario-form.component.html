@@ -1,4 +1,4 @@
-<h1>Cadastrar funcionário</h1>
+<h1>{{btnTitulo}}</h1>
 
 <form [formGroup]="funcionarioForm"] (ngSubmit)="submit()" #formDit="">
 
@@ -41,8 +41,9 @@
 </div>
 
 <div class="btn-box">
-  <button type="submit">Cadastrar</button>
-  <button>Voltar</button>
+  <button type="submit" [disabled]="!funcionarioForm.valid">{{btnAcao}}</button>
+
+  <button routerLink="">Voltar</button>
 </div>
 
 </form>

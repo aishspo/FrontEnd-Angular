@@ -33,21 +33,27 @@
 
     </thead>
 
-    <tbody>
+    <tbody *ngFor="let funcionario of funcionarios">
       <tr>
 
         <td>
-          <span class="dot-active"></span>
-          <span class="dot-inactive"></span>
+          <div *ngIf="funcionario.ativo == true; else inativo">
+            <span class="dot-active"></span>
+          </div>
+
+          <ng-template #inativo>
+            <span class="dot-inactive"></span>
+          </ng-template>
+
         </td>
-        <td>Carlos</td>
-        <td>Eduardo</td>
-        <td>RH</td>
+        <td>{{ funcionario.nome }}</td>
+        <td>{{ funcionario.sobrenome }}</td>
+        <td>{{ funcionario.departamento }}</td>
 
         <div class="buttons">
 
           <td>
-            <button>Editar</button>
+            <button routerLink="/editar/{{funcionario.id}}">Editar</button>
             <button>Detalhes</button>
           </td>
 
