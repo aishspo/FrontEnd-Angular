@@ -10,17 +10,31 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routes';
 
+// Angular Material
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule ({
-  imports: [ 
-    BrowserModule, 
-    HttpClientModule, 
+  imports: [
+    BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    routing ],
+    routing,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
 
-  declarations: [  ],
-  bootstrap:    [ ]
-  
+  ],
+
+  declarations: [ FuncionarioFormComponent ],
+  bootstrap:    [ ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 
 export class AppModule { }

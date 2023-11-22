@@ -27,7 +27,7 @@ input {
   background-color: #e9edc9;
 }
 
-button {
+/* button {
   border: none;
   padding-inline: 1rem;
   padding-block: .5rem;
@@ -39,9 +39,9 @@ button {
     text-decoration: none;
     color: black;
   }
-}
+} */
 
-button:hover {
+/* button:hover {
   background-color: #52796f;
   transition: .5s;
 }
@@ -58,7 +58,7 @@ button:hover {
 
 .del-btn:hover {
   background-color: #e95e3c;
-}
+} */
 
 .input-box {
   margin-block: 2rem;
@@ -79,3 +79,6 @@ button:hover {
   border-radius: 50%;
   display: inline-block;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
