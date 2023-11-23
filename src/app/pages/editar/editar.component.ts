@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FuncionarioFormComponent } from "../../componentes/funcionario-form/funcionario-form.component";
 import { Funcionario } from '../../models/Funcionarios';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-editar',
@@ -12,13 +12,14 @@ import { ActivatedRoute } from '@angular/router';
     styleUrl: './editar.component.css',
     imports: [CommonModule, FuncionarioFormComponent]
 })
+
 export class EditarComponent implements OnInit {
 
   btnAcao: string = "Editar"
   btnTitulo: string = "Editar funcionário"
   funcionario!: Funcionario;
 
-  constructor(private FuncionarioService: FuncionarioService, private route: ActivatedRoute){
+  constructor(private FuncionarioService: FuncionarioService, private route: ActivatedRoute, private router: Router){
 
   }
 
@@ -29,6 +30,12 @@ export class EditarComponent implements OnInit {
     this.FuncionarioService.GetFuncionario(id).subscribe((data) => {
       this.funcionario = data.dados;
 
+    })
+  }
+
+  editarFuncionario(funcionario: Funcionario) {
+    this.FuncionarioService.EditarFuncionario(funcionario).subscribe((data) => {
+      this.router.navigate(['/'])
     })
   }
 

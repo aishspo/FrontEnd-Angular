@@ -15,14 +15,17 @@ import { RouterModule } from '@angular/router';
 })
 
 export class HomeComponent implements OnInit {
-search($event: Event) {
-throw new Error('Method not implemented.');
-}
+
+  search($event: Event) {
+    throw new Error('Method not implemented.');
+  }
 
   funcionarios: Funcionario[] = [];
 
   // busca de funcionários
   funcionariosGeral: Funcionario[] = [];
+
+  colunas = ['Situação', 'Nome', 'Sobrenome', 'Departamento', ' Ações', 'Excluir']
 
   constructor( private FuncionarioService: FuncionarioService ) {}
 

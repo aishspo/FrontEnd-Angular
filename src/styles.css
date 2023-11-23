@@ -8,9 +8,40 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  margin-block: 1rem;
-  margin-inline: 5rem;
+body { 
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+mat-card {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 5rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.input-box {
+  width: 500px;
+}
+
+.btn-box {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-box button {
+  width: 50%;
 }
 
 .funcionario-box {
@@ -25,43 +56,6 @@ input {
   border: none;
   border-radius: 30px;
   background-color: #e9edc9;
-}
-
-/* button {
-  border: none;
-  padding-inline: 1rem;
-  padding-block: .5rem;
-  border-radius: 25px;
-  background-color: #84a98c;
-  margin-inline: .5rem;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-} */
-
-/* button:hover {
-  background-color: #52796f;
-  transition: .5s;
-}
-
-
-.cadastro-btn {
-  padding-inline: 1.5rem;
-
-}
-
-.del-btn {
-  background-color: #ee6c4d;
-}
-
-.del-btn:hover {
-  background-color: #e95e3c;
-} */
-
-.input-box {
-  margin-block: 2rem;
 }
 
 .dot-active {
@@ -80,5 +74,3 @@ input {
   display: inline-block;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
