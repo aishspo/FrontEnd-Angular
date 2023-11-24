@@ -11,10 +11,11 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, HttpClientModule, RouterModule],
   providers:[FuncionarioService],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 
 export class HomeComponent implements OnInit {
+element: any;
 
   search($event: Event) {
     throw new Error('Method not implemented.');

@@ -3,13 +3,17 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Funcionario } from '../../models/Funcionarios';
+import { MatCardModule } from '@angular/material/card';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @Component({
   selector: 'app-detalhes',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatCardModule, MatFormFieldModule, MatCardModule ],
   templateUrl: './detalhes.component.html',
-  styleUrl: './detalhes.component.css'
+  styleUrls: ['./detalhes.component.css']
 })
 export class DetalhesComponent implements OnInit {
 
